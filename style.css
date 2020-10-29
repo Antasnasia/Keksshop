@@ -14,6 +14,8 @@ body {
 .page-header{
     background-color: #363636;
     color: #c3c3c3;
+    background: url("img/header-bg.jpg") no-repeat center;
+    background-size: cover;
 }
 .main-nav {
     list-style: none;
@@ -117,6 +119,10 @@ padding: 5px 10px;
     font-weight: bold;
     color: #000000;
 }
+.feedback-form {
+      background: url("img/write.jpg") no-repeat 100% 40px;
+ padding-right: 390px;
+}
 .feedback-form-group {
     padding: 10px 0;
 }
@@ -171,9 +177,19 @@ border-color: #8d745a;
   .feature-item {
       text-align: center;
       border-left: 1px solid #d9d9d9;
+      padding-top: 90px;
   }
   .feature-item:first-child {
       border-left: none;
+  }
+  .feature-choice {
+      background: url("img/feature-1.png") no-repeat top center;
+  }
+  .feature-quality {
+    background: url("img/feature-2.png") no-repeat top center;
+  }
+  .feature-safety{
+    background: url("img/feature-3.png") no-repeat top center;
   }
   .feature-title {
     font-size: 30px;
