@@ -31,6 +31,10 @@ body {
     width: 205px;
     height: 55px;
 }
+.header-logo img {
+    width: 205px;
+    height: 55px;
+}
 .header-top {
     margin-bottom: 125px;
 }
@@ -41,9 +45,15 @@ body {
     padding:0;
     margin:0;
     margin-left:125px;
+    margin-top: 18px;
 }
 .main-nav li{
     text-transform: uppercase;
+    float: left;
+    margin-right: 50px;
+}
+.main-nav li:last-child {
+    margin-right: 0;
 }
 .main-nav a:link {
     color: white;
@@ -59,15 +69,39 @@ body {
     color:#a38b70;
     text-decoration: none;
     text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid #a38b70;
+    padding: 10px;
+    width: 146px;
+    word-wrap: break-word;
+    text-align: center;
+    font: inherit;
+    border-radius: 2px;
 }
 .btn:hover {
     color: #8d745a;
+    border-color: #8d745a;
 }
 .btn:active {
     color: rgba(141, 116, 90, 0.3);
+    border-color: #8d745a;
 }
 .btn-quick-order {
     float: right;
+    margin-top: 6px;
+    color: white;
+    border-color: white;
+}
+.btn-quick-order:hover {
+    color: #404040;
+    background-color: white;
+    border-color: white;
+}
+.btn-quick-order:active {
+    color: rgba(64, 64, 64, 0.3);
+    background-color: white;
+    border-color: white;
 }
 .page-footer {
    
@@ -245,18 +279,35 @@ border-color: #8d745a;
       width: 279px;
       padding-left: 30px;
       padding-right: 30px;
+      position: relative;
   }
   .feature-item:first-child {
       border-left: 1px solid transparent;
   }
-  .feature-choice {
-      background: url("img/feature-1.png") no-repeat top center;
+  .feature-item::before{
+      content: "";
+      position: absolute;
+      width: 65px;
+      height: 65px;
+      
+      top:0;
+      left:137px;
+      background: url("img/sprite.png") no-repeat;
   }
-  .feature-quality {
-    background: url("img/feature-2.png") no-repeat top center;
+  .feature-item p {
+      margin:0;
   }
-  .feature-safety{
-    background: url("img/feature-3.png") no-repeat top center;
+  .feature-choice::before {
+      background-position: -5px -5px;
+     
+  }
+  .feature-quality::before {
+    background-position: -5px -76px;
+    
+  }
+  .feature-safety::before{
+    background-position: 1px -143px;
+    
   }
   .feature-title {
     font-size: 30px;
@@ -264,25 +315,42 @@ border-color: #8d745a;
     color: #a38b70;
     font-weight: bold;
     line-height: 30px;
+    margin:0;
+    margin-bottom: 20px;
   }
   .cat-reference {
       background-color: #f2f2f2;
       padding-top: 70px;
       padding-bottom: 90px;
   }
-  .cat-reference dl {
-      width: 830px;
+  .cat-reference .container {
+      position: relative;
   }
+  .to-full-reference {
+      position: absolute;
+      top:5px;
+      right: 0;
+  }
+    .cat-reference dl {
+        width: 830px;
+        padding: 0;
+        margin:0;
+    }
   .section-title {
       font-family: Georgia, serif;
       font-size: 45px;
       line-height: 55px;
       font-weight: bold;
       color:#a38b70 ;
+      margin-top: 0;
+      margin-left: 0;
+      margin-bottom: 60px;
+      margin-right: 180px;
   }
   .reference-title {
       font-size: 24px;
       font-weight: bold;
+      display: inline;
   }
   .reference-source {
       color: #666666;
@@ -290,8 +358,24 @@ border-color: #8d745a;
       font-weight: normal;
       font-style: italic;
   }
+  .reference-source a::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      
+      top:0;
+      right: -10px;
+      background: url("img/sprite.png") no-repeat -5px -210px;
+  }
   .cat-reference dd img {
       border-radius: 5px;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100px;
+      height: 100px;
+
   }
   .cat-reference dt {
       margin: 0;
@@ -299,12 +383,19 @@ border-color: #8d745a;
   }
   .cat-reference dd {
       margin: 0;
+      position: relative;
+      min-height: 100px;
+      padding-left: 130px;
+  }
+  .cat-reference dd p {
+      margin: 0;
   }
   .theory-container:first-child {
       margin-bottom: 70px;
   }
   .reference-source a {
       color: #a38b70;
+      position: relative;
   }
   .reference-source a:hover {
       color: #8d745a;
