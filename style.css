@@ -213,6 +213,18 @@ padding: 10px 17px;
 .price-list .price-cost {
     width: 135px;
 }
+.feedback .container {
+    position: relative;
+}
+.feedback-tip {
+    position: absolute;
+    top:0;
+    right: 0;
+    max-width: 500px;
+}
+.feedback .section-title {
+    max-width: 500px;
+}
 .feedback {
     padding-top: 60px;
     padding-bottom: 70px;
@@ -223,11 +235,13 @@ padding: 10px 17px;
  width: 630px;
 }
 .feedback-form-group {
-    padding: 10px 0;
+  margin-bottom: 15px;
 }
 .feedback-form-group label {
     font-size: 12px;
     text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 0 5px 17px;
 }
 .feedback-form input[type="text"],
 .feedback-form select,
@@ -235,6 +249,10 @@ padding: 10px 17px;
 font: inherit;
 color: inherit;
 border: 2px solid #d5d5d5;
+width: 100%;
+padding: 9px 15px;
+height: 54px;
+box-sizing: border-box;
 }
 
 .feedback-form input[type="text"]:hover,
@@ -248,8 +266,52 @@ border-color: #bebebe;
 .feedback-form textarea:focus {
 border-color: #8d745a;
 }
+.feedback-form-group-left-part {
+    float: left;
+    width: 290px;
+}
+.feedback-form-group-right-part {
+    float: right;
+    width: 290px;
+}
+
 .checkbox-area {
     border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 25px;
+    padding: 25px 17px;
+}
+.checkbox-area input[type="checkbox"] {
+    margin:0;
+    margin-right: 5px;
+  }
+
+   /* .checkbox-area::before{  
+       content:"";
+       width: 260px;
+       height: 26px;
+color: #a38b70;
+border: 2px solid red;
+    
+    
+    background-color: white;
+} */
+
+.feedback-form textarea {
+    display: block;
+    min-height: 120px;
+}
+.feedback-form .btn {
+    margin-top:40px;
+    
+    color: white;
+    background-color: #a38b70;
+}
+.feedback-form .btn:hover {
+    background-color: #8d745a;
+    
+}
+.feedback-form .btn:active{
+    color:rgba(255, 255, 255, 0.3);
 }
 .promo  {
     font-size: 45px;
