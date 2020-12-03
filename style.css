@@ -128,6 +128,10 @@ body {
     width: 205px;
     height: 55px;
 }
+.footer-logo img{
+    width: 205px;
+    height: 55px;
+} 
 .footer-menu {
     float: left;
     width: 150px;
@@ -138,9 +142,16 @@ font-family: "Georgia", serif;
 font-size: 24px;
 font-weight: bold;
 color: #a38b70;
+margin:0;
+margin-bottom: 20px;
 }
 .footer-menu ul {
     list-style: none;
+    margin:0;
+    padding: 0;
+}
+.footer-menu li {
+    margin-bottom: 15px;
 }
 .footer-menu a {
     text-decoration-line: none;
@@ -155,18 +166,30 @@ color: #a38b70;
 .footer-social {
     float: left;
     width: 490px;
+    font-size: 0;
 }
 .footer-social b{
     font-family: "Georgia", serif;
     font-size: 24px;
     font-weight: bold;
     color: #a38b70;
+    margin-right: 40px;
 }
 .footer-copyright {
     color: #ffffff;
     text-transform: uppercase;
     float: right;
     width: 236px;
+    margin-top: 17px;
+    text-align: right;
+}
+.footer-copyright .heart {
+    display: inline-block;
+    background: url("img/sprite.png") no-repeat -5px -419px;
+    width: 27px;
+    height: 24px;
+    font-size: 0;
+    vertical-align: middle;
 }
 .footer-copyright a{
     color: #ffffff;
@@ -180,6 +203,29 @@ color: #a38b70;
 }
 .social-btn {
     color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    background: url("img/sprite.png") no-repeat;
+}
+.social-btn-vk {
+    background-position: 16px -238px;
+}
+.social-btn-fb{
+    background-position: 19px -297px;
+}
+.social-btn-in{
+    background-position: 13px -358px;
+}
+.social-btn:hover{
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.social-btn:active {
+    border-color: #ffffff;
+    opacity: 0.1;
 }
 .price-list {
     border-collapse: collapse;
